@@ -16,16 +16,16 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
         <p className={cssModule.location}>{location}</p>
       </div>
 
-      <ul class={cssModule.stats}>
-        <li class={cssModule.stat}>
+      <ul className={cssModule.stats}>
+        <li className={cssModule.stat}>
           <span className={cssModule.label}>Followers</span>
           <span className={cssModule.quantity}>{stats.followers}</span>
         </li>
-        <li class={cssModule.stat}>
+        <li className={cssModule.stat}>
           <span className={cssModule.label}>Views</span>
           <span className={cssModule.quantity}>{stats.views}</span>
         </li>
-        <li class={cssModule.stat}>
+        <li className={cssModule.stat}>
           <span className={cssModule.label}>Likes</span>
           <span className={cssModule.quantity}>{stats.likes}</span>
         </li>
@@ -37,9 +37,9 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
 Profile.propTypes = {
   avatar: PropTypes.string,
   username: PropTypes.string.isRequired,
-  tag: PropTypes.number.isRequired,
+  tag: PropTypes.string.isRequired,
   location: PropTypes.string,
-  stats: PropTypes.array,
+  stats: PropTypes.object,
 };
 
 export default Profile;
