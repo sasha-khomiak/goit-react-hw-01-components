@@ -1,4 +1,5 @@
 import cssModule from './Profile.module.css';
+import PropTypes from 'prop-types';
 
 const Profile = ({ username, tag, location, avatar, stats }) => {
   //   console.log(props);
@@ -11,7 +12,7 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
           className={cssModule.avatar}
         />
         <p className={cssModule.name}>{username}</p>
-        <p className={cssModule.tag}>{`@${tag}`}</p>
+        <p className={cssModule.tag}>@{tag}</p>
         <p className={cssModule.location}>{location}</p>
       </div>
 
@@ -31,6 +32,14 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
       </ul>
     </div>
   );
+};
+
+Profile.propTypes = {
+  avatar: PropTypes.string,
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.number.isRequired,
+  location: PropTypes.string,
+  stats: PropTypes.array,
 };
 
 export default Profile;
