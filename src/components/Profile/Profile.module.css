@@ -1,0 +1,58 @@
+.profile {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(19 / 16);
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  width: 270px;
+  background: #ffffff;
+  /* material shadow v1 */
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.description {
+  width: 270px;
+}
+
+.avatar {
+  width: 100%;
+}
+
+.name {
+  font-weight: bold;
+  color: #212121;
+}
+
+.tag {
+  font-weight: 400;
+  color: #0b09a6;
+}
+
+.location {
+  color: #757575;
+}
+
+.stats {
+  display: flex;
+  padding: 0;
+  padding-bottom: 20px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+}
+
+.label {
+  font-weight: bold;
+}
+
+/* .quantity {
+} */
