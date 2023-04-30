@@ -1,0 +1,50 @@
+.title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: calc(19 / 16);
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin: 10px auto;
+
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px 5px 5px 5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 270px;
+}
+
+.transaction-history {
+  width: 270px;
+  margin: 0 auto;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px 5px 5px 5px;
+  margin-bottom: 30px;
+
+  background-color: white;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(19 / 16);
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.header {
+  background-color: aqua;
+  border: 1px solid black;
+}
+
+.odd-row {
+  background-color: gainsboro;
+}
+
+.pair-row {
+  background-color: whitesmoke;
+}
