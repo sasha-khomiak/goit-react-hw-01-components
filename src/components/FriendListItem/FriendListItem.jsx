@@ -1,11 +1,9 @@
 import PropTypes from 'prop-types';
 import { Li, Name, Status } from './FriendList.styled';
 
-export default function FriendListItem({ id, isOnline, src, name }) {
-  console.log('id', id);
-
+export default function FriendListItem({ isOnline, src, name }) {
   return (
-    <Li key={id}>
+    <Li>
       <Status isOnline={isOnline}></Status>
       <img src={src} alt="User avatar" width="48" />
       <Name>{name}</Name>
@@ -14,7 +12,6 @@ export default function FriendListItem({ id, isOnline, src, name }) {
 }
 
 FriendListItem.propTypes = {
-  id: PropTypes.number.isRequired,
   src: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   isOnline: PropTypes.bool.isRequired,
