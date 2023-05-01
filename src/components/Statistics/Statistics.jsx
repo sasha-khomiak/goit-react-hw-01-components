@@ -1,6 +1,6 @@
 import cssModule from './Statistics.module.css';
 import PropTypes from 'prop-types';
-import getRandomHex from '../../getRandomHex';
+import getRandomHex from '../../utils/getRandomHex';
 
 const Statistics = ({ title, stats }) => {
   return (
@@ -25,7 +25,13 @@ const Statistics = ({ title, stats }) => {
 
 Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.array.isRequired,
+  stats: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ).isRequired,
 };
 
 export default Statistics;

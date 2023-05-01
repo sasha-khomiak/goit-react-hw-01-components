@@ -1,29 +1,21 @@
 import cssModule from './FriendList.module.css';
 import PropTypes from 'prop-types';
-import clsx from 'clsx';
+
+import FriendListItem from '../FriendListItem/FriendListItem';
 
 const FriendList = ({ friends }) => {
+  // console.log(friends);
   return (
     <div>
       <h2 className={cssModule.title}>Your friends</h2>
       <ul className={cssModule[`friend-list`]}>
         {friends.map(el => (
-          <li className={cssModule.item} key={el.id}>
-            <span
-              className={clsx(
-                cssModule.status,
-                el.isOnline && cssModule.statusOnline,
-                !el.isOnline && cssModule.statusOffline
-              )}
-            ></span>
-            <img
-              className={cssModule.avatar}
-              src={el.avatar}
-              alt={el.name}
-              width="48"
-            />
-            <p className={cssModule.name}>{el.name}</p>
-          </li>
+          <FriendListItem
+            id={el.id}
+            src={el.avatar}
+            name={el.name}
+            isOnline={el.isOnline}
+          />
         ))}
       </ul>
     </div>
@@ -31,7 +23,14 @@ const FriendList = ({ friends }) => {
 };
 
 FriendList.propTypes = {
-  friends: PropTypes.array.isRequired,
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+      id: PropTypes.number.isRequired,
+    })
+  ).isRequired,
 };
 
 export default FriendList;
